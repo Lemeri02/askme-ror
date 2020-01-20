@@ -15,8 +15,7 @@ class User < ApplicationRecord
   validates :username, length: { maximum: 40 }, format: { with: USERNAME_PATTERN }
   validates :password, presence: true, confirmation: true, on: :create
 
-  before_validation :email_downcase
-  before_validation :username_downcase
+  before_validation :downcase_fields
   before_save :encrypt_password
 
   def self.authenticate(email, password)
@@ -49,11 +48,10 @@ class User < ApplicationRecord
     end
   end
 
-  def email_downcase
-    self.email&.downcase!
-  end
+  private
 
-  def username_downcase
+  def downcase_fields
+    self.email&.downcase!
     self.username&.downcase!
   end
 end
