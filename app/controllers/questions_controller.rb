@@ -31,6 +31,7 @@ class QuestionsController < ApplicationController
   end
 
   private
+
     def authorize_user
       reject_user unless @question.user == current_user
     end
