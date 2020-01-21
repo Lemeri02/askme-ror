@@ -16,6 +16,8 @@ require('jquery')
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 $(function(){
+  console.log($('#ask-button'))
+  console.log($('#ask-form'))
   $('#ask-button').click(function(){
     $('#ask-form').slideToggle(300);
     return false;
