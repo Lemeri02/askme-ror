@@ -19,7 +19,7 @@
     <% if @questions.size.zero? %>
       <p>У пользователя нет вопросов</p>
     <% else %>
-      <p> 
+      <p>
         <%= fa_icon('comment') %>
         <%= @questions.size %>
         <%= incline(@questions.size, 'вопрос', 'вопроса', 'вопросов') %>
