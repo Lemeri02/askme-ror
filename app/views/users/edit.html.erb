@@ -58,8 +58,19 @@
         <%= f.password_field :password_confirmation, class: 'form-text-field' %>
       </div>
 
-      <div class="form-action buffer-top">
-        <%= f.submit 'Сохранить', class: 'button button-dark button-small' %>
+      <div class="column-3-4">
+        <!-- <div class="form-action buffer-top"> -->
+          <!-- <%= f.submit 'Сохранить', class: 'button button-dark button-small' %> -->
+          <div class=" buffer-top button button-small button-dark button-medium ">
+            <%= link_to "Удалить", user_path(@user),
+                        method: :delete, data: {confirm: 'Точно удалить пользователя?'} %>
+          </div>
+          <div class=" buffer-top button button-small button-dark button-medium ">
+            <%= link_to "Сохранить", user_path(@user),
+                        method: :put%>
+          </div>
+        <!-- </div> -->
+
       </div>
     <% end %>
 
