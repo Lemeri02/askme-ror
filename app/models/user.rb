@@ -18,7 +18,7 @@ class User < ApplicationRecord
   validates :color_theme, format: { with: HEX_COLOR_PATTERN }, on: :update
 
   before_validation :downcase_fields
-  before_save :encrypt_password
+  before_save :encrypt_password, :set_defaults
 
   def self.authenticate(email, password)
     user = find_by(email: email)
@@ -51,6 +51,10 @@ class User < ApplicationRecord
   end
 
   private
+
+  def set_defaults
+    self.color_theme ||= '#005a55'
+  end
 
   def downcase_fields
     self.email&.downcase!
