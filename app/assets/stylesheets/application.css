@@ -1,10 +1,10 @@
 /*
- *= require reset
+*= require reset
+*= require layout
  *= require text
  *= require grid
  *= require button
  *= require form
- *= require layout
  *= require questions
  *= require users
  *= require_self

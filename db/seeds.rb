@@ -10,11 +10,11 @@
 # nordic_ruby: {bgc: "#0B172A", text_color: "#FFFFFF", border: "#BC4123"}}
 #  %>
 User.create(
-  name: 'kuku', username: 'kuku', email: 'kuku@mail.ru', password: '123456', color_theme: '{"bgc": "#FF8883", "text": "#343409", "border": "#B8B814"}'
+  name: 'kuku', username: 'kuku', email: 'kuku@mail.ru', password: '123456', color_theme: '#FF8883'
 )
 User.create(
-  name: 'ruru', username: 'ruru', email: 'ruru@mail.ru', password: '123456', color_theme: '{"bgc": "#FF8883", "text": "#FFFFFF", "border": "#FFC2BB"}'
+  name: 'ruru', username: 'ruru', email: 'ruru@mail.ru', password: '123456'
 )
 User.create(
-  name: 'tutu', username: 'tutu', email: 'tutu@mail.ru', password: '123456', color_theme: '{"bgc": "#0B172A", "text": "#FFFFFF", "border": "#BC4123"}'
+  name: 'tutu', username: 'tutu', email: 'tutu@mail.ru', password: '123456', color_theme: '#0B172A'
 )

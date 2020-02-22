@@ -4,6 +4,7 @@ class User < ApplicationRecord
   ITERATIONS = 20_000
   DIGEST = OpenSSL::Digest::SHA256.new
   USERNAME_PATTERN = /\A\w+\z/.freeze
+  HEX_COLOR_PATTERN = /(?<=#)(?<!^)(\h{6}|\h{3})/.freeze
 
   attr_accessor :password
 
@@ -14,6 +15,7 @@ class User < ApplicationRecord
 
   validates :username, length: { maximum: 40 }, format: { with: USERNAME_PATTERN }
   validates :password, presence: true, confirmation: true, on: :create
+  validates :color_theme, format: { with: HEX_COLOR_PATTERN }, on: :update
 
   before_validation :downcase_fields
   before_save :encrypt_password
