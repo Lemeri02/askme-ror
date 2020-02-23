@@ -31,10 +31,11 @@
 }
 
 .button-danger {
-  text-decoration-skip-ink: auto;
   width: 80px;
-  text-decoration: inherit;
-  color: #fff;
   background-color: #C82333;
   text-align: center;
+}
+
+.button-danger a {
+  color: #fff;
 }
