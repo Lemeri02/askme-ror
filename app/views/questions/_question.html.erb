@@ -1,5 +1,12 @@
 <div class="question">
   <div class="question-content">
+    <div class="question-author">
+      <% if question.author.present? %>
+        <p>от @<%= link_to question.author.username, question.author %></p>
+      <% else %>
+        <p>от Аноним</p>
+      <% end %>
+    </div>
     <div class="question-text text-lead">
       <%= question.text %>
     </div>
