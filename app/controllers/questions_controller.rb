@@ -9,7 +9,6 @@ class QuestionsController < ApplicationController
     @question = Question.new(question_params)
 
     @question.author = current_user
-    binding.irb
 
     if @question.save
       redirect_to user_path(@question.user), notice: 'Вопрос задан'
