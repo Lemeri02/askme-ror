@@ -41,11 +41,7 @@
       <div class="form-field">
         <%= f.label 'Цвет фона', class: 'form-label' %>
         <%= f.color_field :color_theme,
-          value: if @user.color_theme.nil?
-                   '#005a55'
-                 else
-                   @user.color_theme
-                 end %>
+          value: user_color(@user, '#005a55') %>
       </div>
 
       <div class="buffer-top-large buffer-bottom">

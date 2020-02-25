@@ -11,6 +11,14 @@ module ApplicationHelper
     content_tag 'span', '', class: "fa fa-#{icon_class}"
   end
 
+  def user_color(user, color)
+    if user.color_theme.nil?
+      color
+    else
+      user.color_theme
+    end
+  end
+
   def incline(num, one, few, many)
     num %= 100
     num_dec = num % 10
