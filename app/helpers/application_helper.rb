@@ -1,4 +1,6 @@
 module ApplicationHelper
+  DEFAULT_COLOR_THEME = "#005a55"
+
   def user_avatar(user)
     if user.avatar_url.present?
       user.avatar_url
@@ -11,12 +13,8 @@ module ApplicationHelper
     content_tag 'span', '', class: "fa fa-#{icon_class}"
   end
 
-  def user_color(user, color)
-    if user.color_theme.nil?
-      color
-    else
-      user.color_theme
-    end
+  def user_color(user)
+    user.color_theme || DEFAULT_COLOR_THEME
   end
 
   def incline(num, one, few, many)

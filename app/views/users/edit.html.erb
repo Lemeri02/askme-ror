@@ -40,8 +40,7 @@
 
       <div class="form-field">
         <%= f.label 'Цвет фона', class: 'form-label' %>
-        <%= f.color_field :color_theme,
-          value: user_color(@user, '#005a55') %>
+        <%= f.color_field :color_theme, value: user_color(@user) %>
       </div>
 
       <div class="buffer-top-large buffer-bottom">
