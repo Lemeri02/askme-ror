@@ -1,24 +1,29 @@
-# README
+# Клон ask.fm на Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+У пользователей есть возможность задавать вопросы
+другим пользователям, отвечать на вопросы заданные им и прочее.
 
-Things you may want to cover:
+Добавлена Recaptcha для анонимов.
 
-* Ruby version
+## Установка и запуск
 
-* System dependencies
+```
+bundle install
+rails db:migrate
+rails db:seed // если вы хотите загрузить демо-данные
+```
 
-* Configuration
+### Демо версия
 
-* Database creation
+Демо версия доступна на хероку
+* [askme-fm.herokuapp.com/](http://askme-fm.herokuapp.com/)
 
-* Database initialization
+## Используемые технологии
 
-* How to run the test suite
+* [Rails 6](https://rubygems.org/gems/rails/versions/5.1.5) - Любимый веб-фреймворк
+* [Recaptcha](https://github.com/ambethia/recaptcha) - каптча для анонимных юзеров
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Автор
 
-* ...
+* **LEM** - *Учебный проект* - [LEM](https://github.com/Lemeri02)
