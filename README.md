@@ -20,7 +20,7 @@ rails db:seed // если вы хотите загрузить демо-данн
 
 ## Используемые технологии
 
-* [Rails 6](https://rubygems.org/gems/rails/versions/5.1.5) - Любимый веб-фреймворк
+* [Rails 6](https://rubygems.org/gems/rails/versions/) - Любимый веб-фреймворк
 * [Recaptcha](https://github.com/ambethia/recaptcha) - каптча для анонимных юзеров
 
 
